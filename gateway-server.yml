@@ -28,6 +28,13 @@ spring:
 #          - Path=/license/**
 #          filters:
 #          - RewritePath=/license/(?<path>.*), /$\{path}
+          routes:
+          - id: google
+            uri: https://google.com
+            predicates:
+            - Path=/google/**
+            filters:
+            - RewritePath=/google/(?<path>.*), /$\{path}
           discovery:
               locator:
                   enabled: true
