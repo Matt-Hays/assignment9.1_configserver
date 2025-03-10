@@ -15,26 +15,26 @@ spring:
   cloud:
     loadbalancer.ribbon.enabled: false
     gateway:
-#        routes:
-#        - id: organization-service
-#          uri: lb://organization-service
-#          predicates:
-#          - Path=/organization/**
-#          filters:
-#          - RewritePath=/organization/(?<path>.*), /$\{path}
-#        - id: licensing-service
-#          uri: lb://licensing-service
-#          predicates:
-#          - Path=/license/**
-#          filters:
-#          - RewritePath=/license/(?<path>.*), /$\{path}
-          routes:
-          - id: google
-            uri: https://google.com
-            predicates:
-            - Path=/google/**
-            filters:
-            - RewritePath=/google/(?<path>.*), /$\{path}
+       routes:
+       - id: organization-service
+         uri: lb://organization-service
+         predicates:
+         - Path=/organization/**
+         filters:
+         - RewritePath=/organization/(?<path>.*), /$\{path}
+       - id: licensing-service
+         uri: lb://licensing-service
+         predicates:
+         - Path=/license/**
+         filters:
+         - RewritePath=/license/(?<path>.*), /$\{path}
+          # routes:
+          # - id: google
+          #   uri: https://google.com
+          #   predicates:
+          #   - Path=/google/**
+          #   filters:
+          #   - RewritePath=/google/(?<path>.*), /$\{path}
           # discovery:
           #     locator:
           #         enabled: true
