@@ -28,12 +28,12 @@ spring:
          - Path=/license/**
          filters:
          - RewritePath=/license/(?<path>.*), /$\{path}
-       # - id: google
-       #   uri: https://www.google.com
-       #   predicates:
-       #   - Path=/google/**
-       #   filters:
-       #   - RewritePath=/google/(?<path>.*), /$\{path}
+       - id: google
+         uri: https://www.google.com
+         predicates:
+         - Path=/google/**
+         filters:
+         - RewritePath=/google/(?<path>.*), /$\{path}
        # - id: baylor
        #   uri: https://www.baylor.edu
        #   predicates:
